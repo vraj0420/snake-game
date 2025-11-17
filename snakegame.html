@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snake Game — Multifile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header class="hud">
+<div id="score">Score: 0</div>
+<div id="high">High: 0</div>
+<div class="theme-select">
+<label for="theme">Theme</label>
+<select id="theme"></select>
+</div>
+</header>
+
+
+<section id="screens">
+<div id="menu" class="screen fade-in">
+<h1>🐍 Snake</h1>
+<p class="subtitle">Neon, mobile swipe, leaderboard & themes</p>
+<div class="menu-controls">
+<button class="btn" id="startBtn">Start</button>
+<button class="btn" id="leaderBtn">Leaderboard</button>
+</div>
+</div>
+
+
+<div id="gameScreen" class="screen" aria-hidden="true">
+<canvas id="game" width="400" height="400"></canvas>
+<div id="mobileHelp">Swipe to move</div>
+<div id="controls">
+<button class="mini" id="pauseBtn">Pause</button>
+<button class="mini" id="muteBtn">Music: Off</button>
+</div>
+</div>
+
+
+<div id="gameOver" class="screen" aria-hidden="true">
+<h2>Game Over</h2>
+<p id="finalScore"></p>
+<div class="menu-controls">
+<button class="btn" id="playAgain">Play Again</button>
+<button class="btn" id="menuBtn">Main Menu</button>
+</div>
+</div>
+
+
+<div id="leaderboard" class="screen" aria-hidden="true">
+<h2>Leaderboard</h2>
+<ol id="leaders"></ol>
+<div class="menu-controls">
+<button class="btn" id="clearLeaders">Clear</button>
+<button class="btn" id="backFromLeaders">Back</button>
+</div>
+</div>
+</section>
+
+
+<footer class="note">Tip: Press arrow keys or swipe on mobile</footer>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
